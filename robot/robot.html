@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>01 安卓机器人</title>
+    <style>
+        .robot {
+            width: 300px;
+            margin: 100px auto;
+        }
+        .hair {
+            width: 220px;
+            position: relative;
+            transition:all .3s ease-in-out;
+        }
+        .hair:before {
+            content: "";
+            width: 6px;
+            height: 40px;
+            background-color: yellowgreen;
+            border-radius: 3px 3px 0 0;
+            position: absolute;
+            top: -32px;
+            left: 58px;
+            transform: rotate(-20deg);
+        }
+        .hair:after {
+            content: "";
+            width: 6px;
+            height: 40px;
+            background-color: yellowgreen;
+            border-radius: 3px 3px 0 0;
+            position: absolute;
+            top: -32px;
+            right: 58px;
+            transform: rotate(20deg);
+        }
+        .head {
+            width: 220px;
+            height: 100px;
+            background-color: yellowgreen;
+            border-radius: 110px 110px 0 0;
+            position: relative;
+            transition:all .3s ease-in-out;
+        }
+        .head:before, .head:after {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(20px, red, blue);
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            top: 45px;
+        }
+        .head:before {
+            left: 60px;
+        }
+        .head:after {
+            right: 60px;
+        }
+        .body {
+            width: 220px;
+            height: 200px;
+            background-color: yellowgreen;
+            border-radius: 0 0 10px 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+        .body:before, .body:after {
+            content: "";
+            width: 50px;
+            height: 150px;
+            background-color: yellowgreen;
+            border-radius: 25px;
+            position: absolute;
+            top: 0;
+            transition:all 30s ease-in-out;
+            transform-origin: top center;
+        }
+        .body:before {
+            left: -55px;
+        }
+        .body:after {
+            right: -55px;
+        }
+        .shirt {
+            width: 220px;
+            height: 90px;
+            background-color: royalblue;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .under{
+            width: 0px;
+            height: 0px;
+            border-top: 50px solid red;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            position: absolute;
+            bottom: 0;
+        }
+        .foot {
+            width: 220px;
+            position: relative;
+        }
+        .foot:before, .foot:after {
+            content: "";
+            width: 50px;
+            height: 88px;
+            background-color: yellowgreen;
+            border-radius: 0 0 25px 25px;
+            position: absolute;
+        }
+        .foot:before {
+            left: 25px;
+        }
+        .foot:after {
+            right: 25px;
+        }
+
+        /*------------------hover----------------------*/
+        .robot:hover .fei {
+            transform: skew(105deg, 1deg) rotate(360deg);
+        }
+        .robot:hover .head {
+            transform: translate(0, -10px);
+        }
+        .robot:hover .hair {
+            transform: translate(0, -10px);
+        }
+        .robot:hover .head:before {
+            background: radial-gradient(20px, blue, red);
+        }
+        .robot:hover .body:before {
+            transform: rotate(18000deg);
+        }
+        .robot:hover .body:after {
+            transform: rotate(180deg);
+        }
+        .robot:hover .foot:before {
+            height: 110px;
+        }
+        .robot:hover .foot:after {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="robot">
+    <div class="hair">
+    </div>
+    <div class="head"></div>
+    <div class="body">
+        <div class="shirt">
+            <img src="img/img.jpg" width="180" height="80" alt=""/>
+        </div>
+        <div class="under"></div>
+    </div>
+    <div class="foot"></div>
+</div>
+</body>
+</html>
